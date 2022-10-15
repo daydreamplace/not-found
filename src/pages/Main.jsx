@@ -4,9 +4,11 @@ import styled from 'styled-components';
 
 const Main = () => {
   return (
-    <MainPage>
-      <img src={space} alt='background-image' />
-    </MainPage>
+    <>
+      <MainPage>
+        <img src={space} alt='background-image' />
+      </MainPage>
+    </>
   );
 };
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Header from './components/header/Header';
 import Main from './pages/Main';
 import Login from './pages/login/Login';
 import SignUp from './pages/signup/SignUp';
@@ -13,6 +14,7 @@ const App = () => {
       <ThemeProvider theme={Theme}>
         <GlobalStyle />
         <BrowserRouter>
+          <Header />
           <Routes>
             <Route path='/' element={<Main />} />
             <Route path='/login' element={<Login />} />
