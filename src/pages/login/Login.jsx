@@ -12,14 +12,16 @@ const Login = () => {
         <label>* Email </label>
         <div className='loginInput'>
           <AiOutlineMail />
-          <input type='email' placeholder='이메일' />
+          <input type='email' placeholder='e-mail' />
         </div>
         <label>* Password </label>
         <div className='loginInput'>
           <AiFillLock />
-          <input type='password' placeholder='비밀번호' />
+          <input type='password' placeholder='password' />
         </div>
-        <button className='loginButton'>Sign In</button>
+        <button type='submit' className='loginButton'>
+          Sign In
+        </button>
       </div>
       <p> or connect with </p>
       <div className='anotherLogin'>
@@ -31,15 +33,20 @@ const Login = () => {
 };
 
 const LoginForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
   width: 100%;
-  margin: 0 auto;
+  height: 100%;
   padding: 20px;
 
   border: 3px solid ${({ theme }) => theme.hyperMint};
-  border-radius: 4px;
+  border-radius: 15px;
 
   p {
     text-align: center;
+    color: #c0c0c0;
   }
 
   .loginBox {
@@ -47,8 +54,11 @@ const LoginForm = styled.form`
     flex-direction: column;
 
     .loginInput {
+      display: flex;
+      align-items: center;
       margin-bottom: 10px;
       padding: 10px;
+
       border: 1px solid black;
       border-radius: 0.625rem;
 
