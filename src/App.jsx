@@ -13,6 +13,7 @@ const App = () => {
         <BrowserRouter>
           <Routes>
             <Route path='/' element={<Main />} />
+            <Route path='/signup' element={<Main />} />
           </Routes>
         </BrowserRouter>
       </ThemeProvider>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { AiOutlineMail, AiFillLock } from 'react-icons/ai';
 import styled from 'styled-components';
 
@@ -6,7 +7,7 @@ const Login = () => {
   return (
     <LoginForm>
       <p>
-        Don't have an account yet? <span>Sign up</span>
+        Don't have an account yet? <Link to='/signup'>Sign up</Link>
       </p>
       <div className='loginBox'>
         <label>* Email </label>
