@@ -38,7 +38,7 @@ const Form = styled.div`
 const SignUpForm = styled.form`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
 
   width: 100%;
   height: 100%;

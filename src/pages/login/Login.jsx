@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Button from '../../components/button/Button';
+import Button from '../../components/login_form/button/Button';
 import logo from '../../assets/images/logo1.png';
 import space from '../../assets/images/space.jpg';
 import { AiOutlineMail, AiFillLock } from 'react-icons/ai';
