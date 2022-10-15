@@ -3,26 +3,22 @@ import EmailInput from '../../components/login_form/EmailInput';
 import PasswordInput from '../../components/login_form/PasswordInput';
 import Button from '../../components/button/Button';
 import logo from '../../assets/images/logo1.png';
-import space from '../../assets/images/space.jpg';
 import styled from 'styled-components';
 
 const SignUp = () => {
   return (
-    <>
-      <img src={space} alt='background-image' />
-      <Form>
-        <SignUpForm>
-          <img src={logo} alt='logo' />
-          <p>Create new account 🚀 </p>
-          <div className='loginBox'>
-            <EmailInput />
-            <PasswordInput passwordLabel='Password' />
-            <PasswordInput passwordLabel='Confirm password' />
-            <Button type='submit' text='Sign Up' />
-          </div>
-        </SignUpForm>
-      </Form>
-    </>
+    <Form>
+      <SignUpForm>
+        <img src={logo} alt='logo' />
+        <p>Create new account 🚀 </p>
+        <div className='loginBox'>
+          <EmailInput />
+          <PasswordInput passwordLabel='Password' />
+          <PasswordInput passwordLabel='Confirm password' />
+          <Button type='submit' text='Sign Up' />
+        </div>
+      </SignUpForm>
+    </Form>
   );
 };
 

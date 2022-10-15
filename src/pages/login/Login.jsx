@@ -4,34 +4,31 @@ import EmailInput from '../../components/login_form/EmailInput';
 import PasswordInput from '../../components/login_form/PasswordInput';
 import Button from '../../components/button/Button';
 import logo from '../../assets/images/logo1.png';
-import space from '../../assets/images/space.jpg';
+
 import { FcGoogle } from 'react-icons/fc';
 import { SiKakaotalk } from 'react-icons/si';
 import styled from 'styled-components';
 
 const Login = () => {
   return (
-    <>
-      <img src={space} alt='background-image' />
-      <LoginPage>
-        <LoginForm>
-          <img src={logo} alt='logo' />
-          <p>
-            Don't have an account yet? <SignUp to='/signup'>Sign up</SignUp>
-          </p>
-          <div className='loginBox'>
-            <EmailInput />
-            <PasswordInput passwordLabel='Password' />
-            <Button type='submit' text='Sign In' />
-          </div>
-          <p> ↯ - or connect with - ↯ </p>
-          <div className='anotherLogin'>
-            <Button text={<FcGoogle />} />
-            <Button text={<SiKakaotalk />} />
-          </div>
-        </LoginForm>
-      </LoginPage>
-    </>
+    <LoginPage>
+      <LoginForm>
+        <img src={logo} alt='logo' />
+        <p>
+          Don't have an account yet? <SignUp to='/signup'>Sign up</SignUp>
+        </p>
+        <div className='loginBox'>
+          <EmailInput />
+          <PasswordInput passwordLabel='Password' />
+          <Button type='submit' text='Sign In' />
+        </div>
+        <p> ↯ - or connect with - ↯ </p>
+        <div className='anotherLogin'>
+          <Button text={<FcGoogle />} />
+          <Button text={<SiKakaotalk />} />
+        </div>
+      </LoginForm>
+    </LoginPage>
   );
 };
 
