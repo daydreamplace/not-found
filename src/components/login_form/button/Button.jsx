@@ -25,7 +25,6 @@ const Buttons = styled.button`
 
   &:hover {
     cursor: pointer;
-    color: ${({ theme }) => theme.hyperNeon};
     opacity: 0.7;
   }
 `;

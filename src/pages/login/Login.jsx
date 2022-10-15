@@ -72,6 +72,10 @@ const LoginForm = styled.form`
       padding: 5px;
       background-color: transparent;
       border: 1px solid ${({ theme }) => theme.hyperMint};
+
+      &:hover {
+        border: 2px solid ${({ theme }) => theme.hyperMint};
+      }
     }
   }
   .anotherLogin {
