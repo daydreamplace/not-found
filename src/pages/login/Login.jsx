@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import EmailInput from '../../components/login_form/EmailInput';
+import PasswordInput from '../../components/login_form/PasswordInput';
+import Button from '../../components/login_form/button/Button';
 import logo from '../../assets/images/logo1.png';
 import space from '../../assets/images/space.jpg';
-import Button from '../../components/button/Button';
 import { AiOutlineMail, AiFillLock } from 'react-icons/ai';
 import { FcGoogle } from 'react-icons/fc';
 import { SiKakaotalk } from 'react-icons/si';
@@ -19,16 +21,8 @@ const Login = () => {
             Don't have an account yet? <SignUp to='/signup'>Sign up</SignUp>
           </p>
           <div className='loginBox'>
-            <label>* Email </label>
-            <div className='loginInput'>
-              <AiOutlineMail />
-              <input type='email' placeholder='e-mail' />
-            </div>
-            <label>* Password </label>
-            <div className='loginInput'>
-              <AiFillLock />
-              <input type='password' placeholder='password' />
-            </div>
+            <EmailInput />
+            <PasswordInput passwordLabel='Password' />
             <Button type='submit' text='Sign In' />
           </div>
           <p> ↯ - or connect with - ↯ </p>
