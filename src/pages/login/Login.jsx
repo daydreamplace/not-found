@@ -1,6 +1,6 @@
-mport React from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import Button from '../button/button';
+import Button from '../../components/button/Button';
 import { AiOutlineMail, AiFillLock } from 'react-icons/ai';
 import styled from 'styled-components';
 
@@ -97,5 +97,3 @@ const SignUp = styled(Link)`
 `;
 
 export default Login;
-
-
