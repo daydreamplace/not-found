@@ -1,12 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../../assets/images/logo1.png';
 import Button from '../../components/button/Button';
 import { AiOutlineMail, AiFillLock } from 'react-icons/ai';
+import { FcGoogle } from 'react-icons/fc';
+import { SiKakaotalk } from 'react-icons/si';
 import styled from 'styled-components';
 
 const Login = () => {
   return (
     <LoginForm>
+      <img src={logo} alt='logo' />
       <p>
         Don't have an account yet? <SignUp to='/signup'>Sign up</SignUp>
       </p>
@@ -23,10 +27,10 @@ const Login = () => {
         </div>
         <Button type='submit' text='Sign In' />
       </div>
-      <p> or connect with </p>
+      <p> ↯ - or connect with - ↯ </p>
       <div className='anotherLogin'>
-        <Button text='Google' />
-        <Button text='Kakao talk' />
+        <Button text={<FcGoogle />} />
+        <Button text={<SiKakaotalk className='kakao' />} />
       </div>
     </LoginForm>
   );
@@ -43,6 +47,7 @@ const LoginForm = styled.form`
 
   border: 3px solid ${({ theme }) => theme.hyperMint};
   border-radius: 15px;
+  color: #fff;
 
   p {
     text-align: center;
@@ -64,6 +69,9 @@ const LoginForm = styled.form`
 
       input {
         width: 95%;
+        margin-left: 5px;
+
+        background: transparent;
         border: none;
         outline: none;
       }
@@ -94,6 +102,10 @@ const LoginForm = styled.form`
 
 const SignUp = styled(Link)`
   color: #fff;
+
+  &:hover {
+    color: ${({ theme }) => theme.hyperMint};
+  }
 `;
 
 export default Login;
