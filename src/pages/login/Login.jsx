@@ -1,36 +1,55 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../../assets/images/logo1.png';
+import space from '../../assets/images/space.jpg';
 import Button from '../../components/button/Button';
 import { AiOutlineMail, AiFillLock } from 'react-icons/ai';
+import { FcGoogle } from 'react-icons/fc';
+import { SiKakaotalk } from 'react-icons/si';
 import styled from 'styled-components';
 
 const Login = () => {
   return (
-    <LoginForm>
-      <p>
-        Don't have an account yet? <SignUp to='/signup'>Sign up</SignUp>
-      </p>
-      <div className='loginBox'>
-        <label>* Email </label>
-        <div className='loginInput'>
-          <AiOutlineMail />
-          <input type='email' placeholder='e-mail' />
-        </div>
-        <label>* Password </label>
-        <div className='loginInput'>
-          <AiFillLock />
-          <input type='password' placeholder='password' />
-        </div>
-        <Button type='submit' text='Sign In' />
-      </div>
-      <p> or connect with </p>
-      <div className='anotherLogin'>
-        <Button text='Google' />
-        <Button text='Kakao talk' />
-      </div>
-    </LoginForm>
+    <>
+      <img src={space} alt='background-image' />
+      <LoginPage>
+        <LoginForm>
+          <img src={logo} alt='logo' />
+          <p>
+            Don't have an account yet? <SignUp to='/signup'>Sign up</SignUp>
+          </p>
+          <div className='loginBox'>
+            <label>* Email </label>
+            <div className='loginInput'>
+              <AiOutlineMail />
+              <input type='email' placeholder='e-mail' />
+            </div>
+            <label>* Password </label>
+            <div className='loginInput'>
+              <AiFillLock />
+              <input type='password' placeholder='password' />
+            </div>
+            <Button type='submit' text='Sign In' />
+          </div>
+          <p> ↯ - or connect with - ↯ </p>
+          <div className='anotherLogin'>
+            <Button text={<FcGoogle />} />
+            <Button text={<SiKakaotalk />} />
+          </div>
+        </LoginForm>
+      </LoginPage>
+    </>
   );
 };
+
+const LoginPage = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 600px;
+`;
 
 const LoginForm = styled.form`
   display: flex;
@@ -43,6 +62,7 @@ const LoginForm = styled.form`
 
   border: 3px solid ${({ theme }) => theme.hyperMint};
   border-radius: 15px;
+  color: #fff;
 
   p {
     text-align: center;
@@ -64,6 +84,9 @@ const LoginForm = styled.form`
 
       input {
         width: 95%;
+        margin-left: 5px;
+
+        background: transparent;
         border: none;
         outline: none;
       }
@@ -94,6 +117,10 @@ const LoginForm = styled.form`
 
 const SignUp = styled(Link)`
   color: #fff;
+
+  &:hover {
+    color: ${({ theme }) => theme.hyperMint};
+  }
 `;
 
 export default Login;
