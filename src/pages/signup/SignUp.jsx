@@ -42,7 +42,6 @@ const SignUpForm = styled.form`
 
   border: 3px solid ${({ theme }) => theme.hyperMint};
   border-radius: 15px;
-  color: #fff;
 
   p {
     text-align: center;

@@ -16,7 +16,7 @@ body {
     line-height: 1.5;
     font-family: "NanumBarunGothic";
     font-size: 15px;
-    color: #444;
+    color: #fff;
   }
 
   * {
