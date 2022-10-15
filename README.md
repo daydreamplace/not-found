@@ -77,7 +77,7 @@ npm run dev
 - React.js
 - react-router-dom
 - styled-components
-- react icons
+- react-icons
 
 <br />
 
