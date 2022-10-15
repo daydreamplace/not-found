@@ -21,6 +21,7 @@ body {
 
   * {
     box-sizing: border-box;
+    background: url('https://hyper-cloud.kr/static/images/background.jpg');
   }
 `;
 
