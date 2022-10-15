@@ -24,6 +24,10 @@ const Input = styled.div`
     border: 1px solid ${({ theme }) => theme.hyperMint};
     border-radius: 0.625rem;
 
+    &:hover {
+      border: 2px solid ${({ theme }) => theme.hyperMint};
+    }
+
     input {
       width: 95%;
       margin-left: 5px;
