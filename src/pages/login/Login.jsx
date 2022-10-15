@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Button from '../../components/button/Button';
+import EmailInput from '../../components/login_form/EmailInput';
+import PasswordInput from '../../components/login_form/PasswordInput';
+import Button from '../../components/login_form/button/Button';
 import logo from '../../assets/images/logo1.png';
 import space from '../../assets/images/space.jpg';
 import { AiOutlineMail, AiFillLock } from 'react-icons/ai';
@@ -19,16 +21,8 @@ const Login = () => {
             Don't have an account yet? <SignUp to='/signup'>Sign up</SignUp>
           </p>
           <div className='loginBox'>
-            <label>* Email </label>
-            <div className='loginInput'>
-              <AiOutlineMail />
-              <input type='email' placeholder='e-mail' />
-            </div>
-            <label>* Password </label>
-            <div className='loginInput'>
-              <AiFillLock />
-              <input type='password' placeholder='password' />
-            </div>
+            <EmailInput />
+            <PasswordInput passwordLabel='Password' />
             <Button type='submit' text='Sign In' />
           </div>
           <p> ↯ - or connect with - ↯ </p>
@@ -58,7 +52,7 @@ const LoginForm = styled.form`
 
   width: 100%;
   height: 100%;
-  padding: 20px;
+  padding: 20px 30px;
 
   border: 3px solid ${({ theme }) => theme.hyperMint};
   border-radius: 15px;
@@ -73,31 +67,15 @@ const LoginForm = styled.form`
     display: flex;
     flex-direction: column;
 
-    .loginInput {
-      display: flex;
-      align-items: center;
-      margin-bottom: 10px;
-      padding: 10px;
-
-      border: 1px solid ${({ theme }) => theme.hyperMint};
-      border-radius: 0.625rem;
-
-      input {
-        width: 95%;
-        margin-left: 5px;
-
-        background: transparent;
-        border: none;
-        outline: none;
-      }
-    }
-
     button {
-      margin: 10px 0;
+      margin: 30px 0;
       padding: 5px;
-
       background-color: transparent;
       border: 1px solid ${({ theme }) => theme.hyperMint};
+
+      &:hover {
+        border: 2px solid ${({ theme }) => theme.hyperMint};
+      }
     }
   }
   .anotherLogin {

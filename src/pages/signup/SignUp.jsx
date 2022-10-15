@@ -1,7 +1,7 @@
 import React from 'react';
 import EmailInput from '../../components/login_form/EmailInput';
 import PasswordInput from '../../components/login_form/PasswordInput';
-import Button from '../../components/button/Button';
+import Button from '../../components/login_form/button/Button';
 import logo from '../../assets/images/logo1.png';
 import space from '../../assets/images/space.jpg';
 import styled from 'styled-components';
@@ -42,7 +42,7 @@ const SignUpForm = styled.form`
 
   width: 100%;
   height: 100%;
-  padding: 20px;
+  padding: 20px 30px;
 
   border: 3px solid ${({ theme }) => theme.hyperMint};
   border-radius: 15px;
