@@ -5,7 +5,6 @@ import PasswordInput from '../../components/login_form/PasswordInput';
 import Button from '../../components/login_form/button/Button';
 import logo from '../../assets/images/logo1.png';
 import space from '../../assets/images/space.jpg';
-import { AiOutlineMail, AiFillLock } from 'react-icons/ai';
 import { FcGoogle } from 'react-icons/fc';
 import { SiKakaotalk } from 'react-icons/si';
 import styled from 'styled-components';
