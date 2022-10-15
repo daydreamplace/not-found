@@ -42,7 +42,7 @@ const SignUpForm = styled.form`
 
   width: 100%;
   height: 100%;
-  padding: 20px;
+  padding: 20px 30px;
 
   border: 3px solid ${({ theme }) => theme.hyperMint};
   border-radius: 15px;

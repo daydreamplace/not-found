@@ -52,7 +52,7 @@ const LoginForm = styled.form`
 
   width: 100%;
   height: 100%;
-  padding: 20px;
+  padding: 20px 30px;
 
   border: 3px solid ${({ theme }) => theme.hyperMint};
   border-radius: 15px;
@@ -68,7 +68,7 @@ const LoginForm = styled.form`
     flex-direction: column;
 
     button {
-      margin: 10px 0;
+      margin: 30px 0;
       padding: 5px;
       background-color: transparent;
       border: 1px solid ${({ theme }) => theme.hyperMint};
