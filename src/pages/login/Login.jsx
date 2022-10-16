@@ -9,13 +9,13 @@ import { SiKakaotalk } from 'react-icons/si';
 import styled from 'styled-components';
 
 const Login = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  // const goMain = (e) => {
-  //   navigate('/');
-  // };
+  const goMain = () => {
+    navigate('/');
+  };
 
   return (
     <LoginPage>
@@ -27,7 +27,7 @@ const Login = () => {
         <div className='loginBox'>
           <EmailInput />
           <PasswordInput passwordLabel='Password' />
-          <Button type='submit' text='Sign In' />
+          <Button type='button' text='Sign In' onClick={goMain} />
         </div>
         <p> ↯ - or connect with - ↯ </p>
         <div className='anotherLogin'>
