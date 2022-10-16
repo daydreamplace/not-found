@@ -13,6 +13,10 @@ const Post = () => {
   );
 };
 
-const PostPage = styled.div``;
+const PostPage = styled.div`
+  h1 {
+    /* font-family */
+  }
+`;
 
 export default Post;
