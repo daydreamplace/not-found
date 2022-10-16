@@ -66,10 +66,10 @@ const PostCard = () => {
       {cardlist.map((card) => {
         return (
           <Card key={card.team}>
-            <p>{card.team}</p>
-            <p>{card.team_eng}</p>
+            <p className='team'>{card.team}</p>
+            <p className='team'>{card.team_eng}</p>
             {card.content.map((content) => {
-              return <li key={content}>• {content}</li>;
+              return <p key={content}>• {content}</p>;
             })}
           </Card>
         );
@@ -78,24 +78,48 @@ const PostCard = () => {
   );
 };
 
-const CardList = styled.div`
+const CardList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  padding: 0;
 `;
 
-const Card = styled.ul`
+const Card = styled.li`
+  width: calc(90% / 3);
+  margin: 20px calc(10% / 6);
+  /* margin-bottom: 10px;
   width: 300px;
-  margin: 0 20px;
+  margin: 0 20px;*/
   padding: 20px;
 
-  border: 1px solid yellowgreen;
+  /* background-image: linear-gradient(#fff, #fff),
+    linear-gradient(to right bottom, ${({ theme }) => theme.hyperMint}, ${({ theme }) => theme.hyperNeon});
+  background-origin: border-box;
+  background-clip: content-box, border-box;*/
+  border: 1px solid ${({ theme }) => theme.hyperNeon};
   border-top-right-radius: 70px;
+
+  /* border-radius: 50%;
+  border: 1px solid transparent;
+  background-image: linear-gradient(#8cd1c8, #8cd1c8), linear-gradient(#8acfc6, #6db8b6, #58a8ab, #4c9ea4, #489ba2);
+  background-origin: border-box;
+  background-clip: content-box, border-box; */
 
   list-style: none;
 
   p {
+    background: transparent;
+  }
+  .team {
+    font-size: 1.5rem; /* 24px */
+    line-height: 2rem; /* 32px */
     color: ${({ theme }) => theme.hyperMint};
+  }
+
+  &:hover {
+    background: linear-gradient(to bottom, ${({ theme }) => theme.hyperMint}, ${({ theme }) => theme.hyperNeon});
+    color: #000;
   }
 `;
 

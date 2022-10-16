@@ -22,7 +22,7 @@ const Login = () => {
       <LoginForm>
         <img src={logo} alt='logo' />
         <p>
-          Don't have an account yet? <Link to='/signup'>Sign up</Link>
+          Don't have an account yet? <SignUp to='/signup'>Sign up</SignUp>
         </p>
         <div className='loginBox'>
           <EmailInput />
