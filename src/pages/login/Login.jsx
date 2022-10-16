@@ -14,7 +14,7 @@ const Login = () => {
   const [password, setPassword] = useState('');
 
   const goMain = () => {
-    navigate('/news');
+    navigate('/');
   };
 
   return (
@@ -22,13 +22,13 @@ const Login = () => {
       <LoginForm>
         <img src={logo} alt='logo' />
         <p>
-          Don't have an account yet? <SignUp to='/signup'>Sign up</SignUp>
+          Don't have an account yet? <Link to='/signup'>Sign up</Link>
         </p>
         <div className='loginBox'>
           <EmailInput />
           <PasswordInput passwordLabel='Password' />
           <Button type='submit' text='Sign In' onClick={goMain} />
-        </div>
+ </div>
         <p> ↯ - or connect with - ↯ </p>
         <div className='anotherLogin'>
           <Button text={<FcGoogle />} />
@@ -97,9 +97,10 @@ const LoginForm = styled.form`
 
 const SignUp = styled(Link)`
   font-size: large;
+  color: ${({ theme }) => theme.hyperMint};
 
   &:hover {
-    color: ${({ theme }) => theme.hyperMint};
+    color: ${({ theme }) => theme.hyperNeon};
   }
 `;
 
