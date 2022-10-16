@@ -27,8 +27,8 @@ const Login = () => {
         <div className='loginBox'>
           <EmailInput />
           <PasswordInput passwordLabel='Password' />
-          <Button type='button' text='Sign In' onClick={goMain} />
-        </div>
+          <Button type='submit' text='Sign In' onClick={goMain} />
+ </div>
         <p> ↯ - or connect with - ↯ </p>
         <div className='anotherLogin'>
           <Button text={<FcGoogle />} />

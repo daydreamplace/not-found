@@ -14,7 +14,7 @@
 
 <br />
 
-**기간** :
+**기간** : 10월 15일 ~
 <br />
 <br />
 
@@ -77,7 +77,7 @@ npm run dev
 - React.js
 - react-router-dom
 - styled-components
-- react icons
+- react-icons
 
 <br />
 
