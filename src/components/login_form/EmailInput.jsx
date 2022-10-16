@@ -8,7 +8,7 @@ const EmailInput = () => {
       <label>* Email </label>
       <div className='loginInput'>
         <AiOutlineMail />
-        <input type='email' placeholder='e-mail' />
+        <input type='email' placeholder='e-mail' autoComplete='username' />
       </div>
     </Input>
   );

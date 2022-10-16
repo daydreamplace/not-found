@@ -8,7 +8,7 @@ const PasswordInput = ({ passwordLabel }) => {
       <label>* {passwordLabel} </label>
       <div className='loginInput'>
         <AiFillLock />
-        <input type='password' placeholder='password' />
+        <input type='password' placeholder='password' autoComplete='current-password' />
       </div>
     </Input>
   );

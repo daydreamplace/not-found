@@ -9,25 +9,25 @@ import { SiKakaotalk } from 'react-icons/si';
 import styled from 'styled-components';
 
 const Login = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const goMain = () => {
-    navigate('/');
-  };
+  // const goMain = (e) => {
+  //   navigate('/');
+  // };
 
   return (
     <LoginPage>
       <LoginForm>
         <img src={logo} alt='logo' />
         <p>
-          Don't have an account yet? <SignUp to='/signup'>Sign up</SignUp>
+          Don't have an account yet? <Link to='/signup'>Sign up</Link>
         </p>
         <div className='loginBox'>
           <EmailInput />
           <PasswordInput passwordLabel='Password' />
-          <Button type='submit' text='Sign In' onClick={goMain} />
+          <Button type='submit' text='Sign In' />
         </div>
         <p> ↯ - or connect with - ↯ </p>
         <div className='anotherLogin'>
