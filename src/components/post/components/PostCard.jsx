@@ -69,7 +69,7 @@ const PostCard = () => {
             <p>{card.team}</p>
             <p>{card.team_eng}</p>
             {card.content.map((content) => {
-              return <li key={content}>{content}</li>;
+              return <li key={content}>• {content}</li>;
             })}
           </Card>
         );
@@ -88,8 +88,11 @@ const Card = styled.ul`
   width: 300px;
   margin: 0 20px;
   padding: 20px;
+
   border: 1px solid yellowgreen;
   border-top-right-radius: 70px;
+
+  list-style: none;
 
   p {
     color: ${({ theme }) => theme.hyperMint};
