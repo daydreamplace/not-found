@@ -10,9 +10,11 @@ import styled from 'styled-components';
 
 const Login = () => {
   const navigate = useNavigate();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const goMain = () => {
-    navigate('');
+    navigate('/news');
   };
 
   return (
@@ -94,7 +96,7 @@ const LoginForm = styled.form`
 `;
 
 const SignUp = styled(Link)`
-  color: #fff;
+  font-size: large;
 
   &:hover {
     color: ${({ theme }) => theme.hyperMint};

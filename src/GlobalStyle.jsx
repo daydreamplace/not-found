@@ -23,6 +23,11 @@ body {
     box-sizing: border-box;
     background: url('https://hyper-cloud.kr/static/images/background.jpg');
   }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
 `;
 
 export default GlobalStyle;
