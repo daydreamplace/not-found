@@ -14,7 +14,7 @@ const Login = () => {
   const [password, setPassword] = useState('');
 
   const goMain = () => {
-    navigate('/news');
+    navigate('/');
   };
 
   return (
@@ -97,9 +97,10 @@ const LoginForm = styled.form`
 
 const SignUp = styled(Link)`
   font-size: large;
+  color: ${({ theme }) => theme.hyperMint};
 
   &:hover {
-    color: ${({ theme }) => theme.hyperMint};
+    color: ${({ theme }) => theme.hyperNeon};
   }
 `;
 
