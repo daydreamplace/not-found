@@ -27,6 +27,11 @@ body {
   a {
     color: #fff;
     text-decoration: none;
+
+    &:hover {
+      color: #fff;
+      text-decoration: none;
+    }
   }
 `;
 
