@@ -28,7 +28,7 @@ const Login = () => {
           <EmailInput />
           <PasswordInput passwordLabel='Password' />
           <Button type='submit' text='Sign In' onClick={goMain} />
- </div>
+        </div>
         <p> ↯ - or connect with - ↯ </p>
         <div className='anotherLogin'>
           <Button text={<FcGoogle />} />
