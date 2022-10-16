@@ -16,12 +16,22 @@ body {
     line-height: 1.5;
     font-family: "NanumBarunGothic";
     font-size: 15px;
-    color: #444;
+    color: #fff;
   }
 
   * {
     box-sizing: border-box;
     background: url('https://hyper-cloud.kr/static/images/background.jpg');
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      color: #fff;
+      text-decoration: none;
+    }
   }
 `;
 
